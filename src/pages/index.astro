@@ -9,24 +9,27 @@ const postCollection = await getCollection('post', ({ data }) => {
   return import.meta.env.DEV || data.draft !== true;
 });
 
-const tagCounts = postCollection.reduce<Record<string, number>>((res, post) => {
-  const postTags = post.data.tags;
-  if(!postTags || !postTags.length) return res;
-  postTags.forEach(tag => {
-    if(tag.trim() === '') return;
+const tagCounts = postCollection.reduce<Record<string, number>>(
+  (res, post) => {
+    const postTags = post.data.tags;
+    if (!postTags || !postTags.length) return res;
+    postTags.forEach((tag) => {
+      if (tag.trim() === '') return;
 
-    if(res[tag]) {
-      res[tag]++;
-    } else {
-      res[tag] = 1;
-    }
-  })
-  return res;
-}, {
-  All: postCollection.length
-})
+      if (res[tag]) {
+        res[tag]++;
+      } else {
+        res[tag] = 1;
+      }
+    });
+    return res;
+  },
+  {
+    All: postCollection.length,
+  },
+);
 
-const tags = Object.keys(tagCounts).map(tag => ({
+const tags = Object.keys(tagCounts).map((tag) => ({
   name: tag,
   count: tagCounts[tag],
 }));
@@ -80,8 +83,8 @@ const posts = [...postCollection]
       {
         tags.map(({ name, count }) => (
           <li class="block cursor-pointer rounded-full bg-slate3 px-4 py-2 text-slate10 transition-all hover:bg-slate4 hover:text-slate11">
-            {name} 
-            <sup class="text-slate8 text-[10px]">{count}</sup>
+            {name}
+            <sup class="text-[10px] text-slate8">{count}</sup>
           </li>
         ))
       }
@@ -91,6 +94,6 @@ const posts = [...postCollection]
 </PageLayout>
 <style>
   .blog-list-item {
-    @apply flex cursor-pointer flex-col justify-between rounded-lg py-2 transition-all active:scale-[0.995] active:bg-slate4 sm:flex-row sm:items-center sm:px-2 sm:hover:bg-slate3;
+    @apply flex cursor-pointer flex-col justify-between rounded-lg py-2.5 transition-all active:scale-[0.995] active:bg-slate4 sm:flex-row sm:items-center sm:px-2 sm:hover:bg-slate3;
   }
 </style>
