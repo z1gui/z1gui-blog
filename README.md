@@ -4,7 +4,7 @@ English · [中文](./README-zh_CN.md)
 
 ## ✨ Features
 
-- Minimalist style theme, adaptable to multiple platforms
+- Minimalist style theme, adaptable to multiple platforms, support `light` and `dark` mode.
 - Zero-based quick start, foolproof configuration, easy deployment
 - Support for article drafts, local preview, and automatic draft filtering in production builds
 - Default RSS generation with Follow subscription authentication
@@ -60,6 +60,7 @@ Theme configuration is done through `slate.config.ts` in the root directory.
 | title | Website title | `string` | - |
 | description | Website description | `string` | - |
 | lang | Language | `string` | `zh-CN` |
+| theme | Theme | `{ mode: 'auto' | 'light' | 'dark', enableUserChange: boolean }` | `{ mode: 'auto', enableUserChange: true }` |
 | avatar | Avatar | `string` | - |
 | sitemap | Website sitemap configuration | [SitemapOptions](https://docs.astro.build/en/guides/integrations-guide/sitemap/)  | - |
 | readTime | Show reading time | `boolean` | `false` |
