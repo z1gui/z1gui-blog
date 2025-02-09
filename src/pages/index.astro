@@ -60,10 +60,10 @@ const posts = [...postCollection]
     <div class="text-base text-slate12">
       {
         posts.map((item) => (
-          <a class="blog-list-item" href={item.url} title={item.data.title}>
-            <span class="flex-shrink-0">{item.data.title}</span>
-            <span class="mx-8 hidden h-px w-full flex-grow border-t border-dashed border-slate6 sm:flex" />
-            <span class="flex-shrink-0 text-slate8">
+          <a class="flex cursor-pointer flex-col justify-between rounded-lg py-2.5 transition-all active:scale-[0.995] active:bg-slate4 sm:flex-row sm:items-center sm:px-2 sm:hover:bg-slate3" href={item.url} title={item.data.title}>
+            <span class="shrink-0">{item.data.title}</span>
+            <span class="mx-8 hidden h-px w-full grow border-t border-dashed border-slate6 sm:flex" />
+            <span class="shrink-0 text-slate8">
               {item.data.pubDate?.toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'short',
@@ -92,8 +92,3 @@ const posts = [...postCollection]
   </section>
   <!-- E 标签 -->
 </PageLayout>
-<style>
-  .blog-list-item {
-    @apply flex cursor-pointer flex-col justify-between rounded-lg py-2.5 transition-all active:scale-[0.995] active:bg-slate4 sm:flex-row sm:items-center sm:px-2 sm:hover:bg-slate3;
-  }
-</style>

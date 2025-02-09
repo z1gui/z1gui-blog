@@ -10,7 +10,7 @@ import CodeGroupEvent from '@/components/code-group-event';
 import slateConfig from '~@/slate.config';
 import { getFullTitle } from '@/helpers/utils';
 import 'remark-block-containers/css';
-import '@/assets/style/blog.scss';
+import '@/assets/style/blog.css';
 
 export async function getStaticPaths() {
   const postEntries = await getCollection('post', ({ data }) => {
@@ -46,7 +46,7 @@ const formattedPubDate = pubDate.isSame(dayjs(), 'year')
     lastModified={lastModifiedDate.toDate()}
   />
   <CodeGroupEvent client:only="react" />
-  <AffixTitle title={post.data.title} offsetTop={100} client:only="react" />
+  <AffixTitle title={post.data.title} offsetTop={100} client:idle />
 
   <div class="mb-16" slot="header">
     <Button id="back">←</Button>
@@ -55,7 +55,7 @@ const formattedPubDate = pubDate.isSame(dayjs(), 'year')
   <div class="blog-content">
     <div class="mb-16">
       <h1>{post.data.title}</h1>
-      <div class="flex items-center gap-2 text-black/25">
+      <div class="flex items-center gap-2 text-slate10">
         <span>{formattedPubDate}</span>
         {!!slateConfig.readTime && <span>·</span>}
         {

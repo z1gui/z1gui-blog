@@ -2,7 +2,7 @@ import { DocSearch } from '@docsearch/react';
 import slateConfig from '~@/slate.config';
 import { useLocales } from './useLocales';
 import '@docsearch/css';
-import './index.scss';
+import './index.css';
 
 interface SearchProps {
   className?: string;

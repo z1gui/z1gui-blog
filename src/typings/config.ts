@@ -3,11 +3,23 @@ import type { SitemapOptions } from '@astrojs/sitemap';
 export const languages = ['zh-CN', 'en-US'] as const;
 export type LangType = (typeof languages)[number];
 
+export const theme = ['auto', 'light', 'dark'] as const;
+/** 主题模式 */
+export type ThemeMode = (typeof theme)[number];
+export interface ThemeOptions {
+  /** 模式 */
+  mode: ThemeMode;
+  /** 是否允许允许用户切换 */
+  enableUserChange?: boolean;
+}
+
 export interface SlateConfig {
   /** 最终部署的链接 */
   site: string;
   /** 语言 */
   lang?: LangType;
+  /** 主题 */
+  theme?: ThemeOptions;
   /** 头像 */
   avatar?: string;
   /** sitemap 配置 */

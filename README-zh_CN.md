@@ -4,7 +4,7 @@
 
 ## ✨ 特性
 
-- 极简风主题，设配多端场景。
+- 极简风主题，设配多端场景, 支持 `light` 和 `dark` 模式。
 - 傻瓜式配置，0基础快速上手部署。
 - 支持文章草稿，本地允许预览，生产构建自动过滤。
 - 支持 algolia 搜索和 follow 订阅认证配置开启。
@@ -57,6 +57,7 @@ pnpm build
 | title | 网站标题 | `string` | - |
 | description | 网站描述 | `string` | - |
 | lang | 语言 | `string` | `zh-CN` |
+| theme | 主题 | `{ mode: 'auto' | 'light' | 'dark', enableUserChange: boolean }` | `{ mode: 'auto', enableUserChange: true }` |
 | avatar | 头像 | `string` | - |
 | sitemap | 网站 sitemap 配置 | [SitemapOptions](https://docs.astro.build/zh-cn/guides/integrations-guide/sitemap/) | - |
 | readTime | 是否显示阅读时间 | `boolean` | `false` |
