@@ -9,9 +9,15 @@ tags:
 pubDate: 2025-01-21
 ---
 
+## Why We build it?
+We love writing and sharing, and we also appreciate great internet products. So we created this minimalist blogging product, focusing on content itself, providing a smooth and pure writing and reading experience, and built on the latest technology framework to make it faster and lighter.
+
+It also works seamlessly with [Obsidian](https://obsidian.md/), helping you turn your notes into published posts effortlessly.
+
 ## ✨ Features
 
 - Minimalist style theme, adaptable to multiple platforms
+- Support `light` and `dark` mode.
 - Zero-based quick start, foolproof configuration, easy deployment
 - Support for article drafts, local preview, and automatic draft filtering in production builds
 - Default RSS generation with Follow subscription authentication
@@ -22,6 +28,7 @@ pubDate: 2025-01-21
 
 - Astro + React + Typescript  
 - Tailwindcss + @radix-ui/colors
+  - Updated to [Tailwind CSS v4.0](https://tailwindcss.com/blog/tailwindcss-v4) (Jan 10, 2025)
 - Docsearch
 
 ## 🔨 Usage
@@ -67,8 +74,9 @@ Theme configuration is done through `slate.config.ts` in the root directory.
 | title | Website title | `string` | - |
 | description | Website description | `string` | - |
 | lang | Language | `string` | `zh-CN` |
+| theme | Theme | `{ mode: 'auto' | 'light' | 'dark', enableUserChange: boolean }` | `{ mode: 'auto', enableUserChange: true }` |
 | avatar | Avatar | `string` | - |
-| sitemap | Website sitemap configuration | `{ hostname: string }` | - |
+| sitemap | Website sitemap configuration | [SitemapOptions](https://docs.astro.build/en/guides/integrations-guide/sitemap/)  | - |
 | readTime | Show reading time | `boolean` | `false` |
 | lastModified | Show last modified time | `boolean` | `false` |
 | algolia | Docsearch configuration | `{ appId: string, apiKey: string, indexName: string }` | - |
@@ -114,3 +122,47 @@ tags:
 pubDate: 2025-01-06
 ---
 ```
+
+## Markdown Syntax Support
+
+In addition to standard Markdown syntax, the following extended syntax is supported:
+
+### Basic Syntax
+- Headers, lists, blockquotes, code blocks and other basic syntax
+- Tables
+- Links and images
+- **Bold**, *italic*, and ~strikethrough~ text
+
+### Extended Syntax
+#### Container syntax
+Using `:::` markers
+  ```md
+  :::info
+  This is an information prompt
+  :::
+  ```
+  The result will be displayed as:
+
+  :::info
+  This is an information prompt
+  :::
+
+#### LaTeX Mathematical Formulas
+  - Inline formula: $E = mc^2$
+  - Block formula: $$ E = mc^2 $$
+
+#### Support for image captions
+  ```md
+  ![Image caption](image-url)
+  ```
+The result will be displayed as:
+
+![Slate Blog Preview](https://pub-acdbc21bc3964d18a684b0c51010a4e5.r2.dev/slate-blog-preview.png)
+  
+## Updates
+
+### Version 1.1
+- Upgraded to support [Tailwind CSS v4.0](https://tailwindcss.com/blog/tailwindcss-v4)
+- Added dark mode support
+- Fixed known issues
+

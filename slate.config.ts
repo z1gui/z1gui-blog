@@ -11,6 +11,6 @@ export default defineConfig({
   lastModified: true,
   readTime: true,
   footer: {
-    copyright: '© 2025 Slate Blog',
+    copyright: '© 2025 Slate Design',
   }
 });

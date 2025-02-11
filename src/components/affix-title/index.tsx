@@ -13,7 +13,7 @@ const AffixTitle = (props: AffixTitleProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const classes = classNames(
-    'fixed left-0 right-0 top-0 w-full transform bg-slate1/90 backdrop-blur-md transition-all duration-300 ease-in-out',
+    'fixed left-0 right-0 top-0 w-full transform bg-slate1/90 backdrop-blur-md transition-all duration-300 ease-in-out z-10',
     isVisible ? ['translate-y-0', 'opacity-100'] : ['-translate-y-full', 'opacity-0'],
   );
 

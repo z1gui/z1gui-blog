@@ -5,7 +5,7 @@ tags:
   - Dev
   - Web
   - Animation
-pubDate: 2025-01-21
+pubDate: 2023-09-05
 ---
 Earlier this year, I built a Toast library for React called [Sonner](https://sonner.emilkowal.ski/). In this article, I'll show you some of the lessons I've learned and mistakes I made while building it.
 
