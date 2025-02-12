@@ -1,0 +1,49 @@
+.sb-social-icon {
+  mask: var(--icon) no-repeat;
+  mask-size: 100% 100%;
+  @apply block h-full w-full bg-current fill-current text-inherit;
+
+  &.facebook {
+    --icon: url('../../assets/images/github.svg');
+  }
+
+  &.github {
+    --icon: url('../../assets/images/github.svg');
+  }
+
+  &.instagram {
+    --icon: url('../../assets/images/github.svg');
+  }
+
+  &.npm {
+    --icon: url('../../assets/images/github.svg');
+  }
+
+  &.jike {
+    --icon: url('../../assets/images/github.svg');
+  }
+
+  &.rednote {
+    --icon: url('../../assets/images/github.svg');
+  }
+
+  &.threads {
+    --icon: url('../../assets/images/github.svg');
+  }
+
+  &.stackoverflow {
+    --icon: url('../../assets/images/github.svg');
+  }
+
+  &.weibo {
+    --icon: url('../../assets/images/github.svg');
+  }
+
+  &.x {
+    --icon: url('../../assets/images/github.svg');
+  }
+
+  &.youtube {
+    --icon: url('../../assets/images/github.svg');
+  }
+}

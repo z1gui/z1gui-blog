@@ -13,6 +13,27 @@ export interface ThemeOptions {
   enableUserChange?: boolean;
 }
 
+/** 社交链接配置 */
+export interface SocialLink {
+  icon: SocialLinkIcon;
+  link: string;
+  ariaLabel?: string;
+}
+
+type SocialLinkIcon =
+  | 'facebook'
+  | 'github'
+  | 'instagram'
+  | 'npm'
+  | 'jike'
+  | 'rednote'
+  | 'threads'
+  | 'stackoverflow'
+  | 'weibo'
+  | 'x'
+  | 'youtube'
+  | { svg: string };
+
 export interface SlateConfig {
   /** 最终部署的链接 */
   site: string;
@@ -47,4 +68,6 @@ export interface SlateConfig {
     feedId: string;
     userId: string;
   };
+  /** 社交链接 */
+  socialLinks?: SocialLink[];
 }

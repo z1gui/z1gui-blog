@@ -57,7 +57,7 @@ pnpm build
 | title | 网站标题 | `string` | - |
 | description | 网站描述 | `string` | - |
 | lang | 语言 | `string` | `zh-CN` |
-| theme | 主题 | `{ mode: 'auto' | 'light' | 'dark', enableUserChange: boolean }` | `{ mode: 'auto', enableUserChange: true }` |
+| theme | 主题 | `{ mode: 'auto' \| 'light' \| 'dark', enableUserChange: boolean }` | `{ mode: 'auto', enableUserChange: true }` |
 | avatar | 头像 | `string` | - |
 | sitemap | 网站 sitemap 配置 | [SitemapOptions](https://docs.astro.build/zh-cn/guides/integrations-guide/sitemap/) | - |
 | readTime | 是否显示阅读时间 | `boolean` | `false` |
@@ -65,6 +65,25 @@ pnpm build
 | algolia | docsearch 配置 | `{ appId: string, apiKey: string, indexName: string }` | - |
 | follow | follow 订阅认证配置 | `{ feedId: string, userId: string }` | - |
 | footer | 网站底部配置 | `{ copyright: string }` | - |
+| socialLinks | 社交链接配置 | `{ icon: [SocialLinkIcon](#SocialLinkIcon), link: string, ariaLabel?: string }` | - |
+
+### SocialLinkIcon
+
+```ts
+type SocialLinkIcon =
+  | 'discord'
+  | 'facebook'
+  | 'github'
+  | 'instagram'
+  | 'linkedin'
+  | 'mastodon'
+  | 'npm'
+  | 'slack'
+  | 'twitter'
+  | 'x'
+  | 'youtube'
+  | { svg: string }
+```
 
 ### algolia 申请
 
