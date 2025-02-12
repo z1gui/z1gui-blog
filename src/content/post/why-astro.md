@@ -5,7 +5,7 @@ tags:
   - Dev
   - Astro
   - Web
-pubDate: 2025-01-21
+pubDate: 2024-12-03
 ---
 
 Astro is the web framework for building content-driven websites like blogs, marketing, and e-commerce. Astro is best-known for pioneering a new [frontend architecture](https://docs.astro.build/en/concepts/islands/) to reduce JavaScript overhead and complexity compared to other frameworks. If you need a website that loads fast and has great SEO, then Astro is for you.
@@ -85,3 +85,7 @@ Astro invests in developer tools like a great CLI experience from the moment you
 Our welcoming, respectful, inclusive community on Discord is ready to provide support, motivation, and encouragement. Open a `#support` thread to get help with your project. Visit our dedicated `#showcase`channel for sharing your Astro sites, blog posts, videos, and even work-in-progress for safe feedback and constructive criticism. Participate in regular live events such as our weekly community call, “Talking and Doc’ing,” and API/bug bashes.
 
 As an open-source project, we welcome contributions of all types and sizes from community members of all experience levels. You are invited to join in roadmap discussions to shape the future of Astro, and we hope you’ll contribute fixes and features to the core codebase, compiler, docs, language tools, websites, and other projects.
+
+::: info
+From [Why Astro?](https://docs.astro.build/en/concepts/why-astro/)
+:::

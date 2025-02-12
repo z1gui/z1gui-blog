@@ -4,7 +4,7 @@ description: Life is short, as everyone knows. When I was a kid I used to wonder
 tags:
   - Thinking
   - Life
-pubDate: 2025-01-21
+pubDate: 2016-01-01
 ---
 
 Life is short, as everyone knows. When I was a kid I used to wonder about this. Is life actually short, or are we really complaining about its finiteness? Would we be just as likely to feel life was short if we lived 10 times as long?
@@ -69,7 +69,12 @@ Notes
 
 [2] I chose this example deliberately as a note to self. I get attacked a lot online. People tell the craziest lies about me. And I have so far done a pretty mediocre job of suppressing the natural human inclination to say "Hey, that's not true!"
 
-Thanks to Jessica Livingston and Geoff Ralston for reading drafts of this.
+**Thanks** to Jessica Livingston and Geoff Ralston for reading drafts of this.
+
+- [Korean Translation](https://blog.naver.com/happy_alpaca/221346692172)
+- [Japanese Translation](https://note.com/tokyojack/n/ne4c25e990634)
+- [Chinese Translation](https://www.jianshu.com/p/682429f8ac3f)
+
 
 :::info
 From [LIFE IS SHORT](https://www.paulgraham.com/vb.html)

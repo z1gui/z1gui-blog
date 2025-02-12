@@ -5,7 +5,7 @@ tags:
   - Obsidian
   - Writing
   - Dev
-pubDate: 2025-01-21
+pubDate: 2024-04-16
 ---
 
 I use [Obsidian](https://stephango.com/obsidian) to think, take notes, write essays, and publish this site. This is my bottom-up approach to note-taking and organizing things I am interested in. It embraces chaos and laziness to create emergent structure.
@@ -28,7 +28,7 @@ The following is in no way dogmatic, just one example of how you can use Obsidia
 ## Plugins
 Some of my templates depend on plugins:
 
-- [Dataview](https://github.com/blacksmithgu/obsidian-dataview)for overview notes
+- [Dataview](https://github.com/blacksmithgu/obsidian-dataview) for overview notes
 - [Leaflet](https://github.com/javalent/obsidian-leaflet) for maps
 
 ## Folders

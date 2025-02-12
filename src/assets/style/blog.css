@@ -25,10 +25,10 @@
     @apply text-indigo11 underline-offset-4 transition-all hover:underline decoration-indigo6;
   }
 
-  a::after{
+  /* a::after{
     @apply text-slate8 mx-0.5;
     content: '↗';
-  }
+  } */
 
   img {
     @apply mx-auto my-8 w-full rounded-2xl border border-slate6;
@@ -116,7 +116,7 @@
   }
 
   figcaption {
-    @apply text-center text-sm text-slate8;
+    @apply text-center text-sm text-slate8 -mt-4;
   }
 
   .expressive-code{

@@ -2,9 +2,16 @@
 
 English · [中文](./README-zh_CN.md)
 
+## Why We build it?
+
+We love writing and sharing, and we appreciate well-crafted products. That’s why we created this minimalist theme, focusing on content itself, providing a smooth and pure writing and reading experience. Built on the latest framework, it’s faster, lighter, and more efficient.
+
+It also works seamlessly with [Obsidian](https://obsidian.md/), helping you turn your notes into published posts effortlessly.
+
 ## ✨ Features
 
-- Minimalist style theme, adaptable to multiple platforms, support `light` and `dark` mode.
+- Minimalist style theme, adaptable to multiple platforms
+- Support `light` and `dark` mode.
 - Zero-based quick start, foolproof configuration, easy deployment
 - Support for article drafts, local preview, and automatic draft filtering in production builds
 - Default RSS generation with Follow subscription authentication
@@ -15,6 +22,7 @@ English · [中文](./README-zh_CN.md)
 
 - Astro + React + Typescript  
 - Tailwindcss + @radix-ui/colors
+  - Updated to [Tailwind CSS v4.0](https://tailwindcss.com/blog/tailwindcss-v4) (Jan 10, 2025)
 - Docsearch
 
 ## 🔨 Usage
@@ -108,3 +116,48 @@ tags:
 pubDate: 2025-01-06
 ---
 ```
+
+## Markdown Syntax Support
+
+In addition to standard Markdown syntax, the following extended syntax is supported:
+
+### Basic Syntax
+- Headers, lists, blockquotes, code blocks and other basic syntax
+- Tables
+- Links and images
+- **Bold**, *italic*, and ~strikethrough~ text
+
+### Extended Syntax
+#### Container syntax
+Using `:::` markers
+  ```md
+  :::info
+  This is an information prompt
+  :::
+  ```
+  The result will be displayed as:
+
+  :::info
+  This is an information prompt
+  :::
+
+#### LaTeX Mathematical Formulas
+  - Inline formula: $E = mc^2$
+  - Block formula: $$ E = mc^2 $$
+
+#### Support for image captions
+  ```md
+  ![Image caption](image-url)
+  ```
+The result will be displayed as:
+
+![Slate Blog Preview](https://pub-acdbc21bc3964d18a684b0c51010a4e5.r2.dev/slate-blog-preview.png)
+  
+## Updates
+### Version 1.1.1
+- Fixed known issues
+
+### Version 1.1
+- Upgraded to support [Tailwind CSS v4.0](https://tailwindcss.com/blog/tailwindcss-v4)
+- Added dark mode support
+- Fixed known issues
