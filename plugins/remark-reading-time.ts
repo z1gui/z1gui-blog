@@ -1,5 +1,5 @@
 /*
- * @Description: 添加阅读时间
+ * @file: Add reading time
  */
 import getReadingTime from 'reading-time';
 import { toString } from 'mdast-util-to-string';
