@@ -155,11 +155,6 @@ Using `:::` markers
   This is an information prompt
   :::
   ```
-  The result will be displayed as:
-
-  :::info
-  This is an information prompt
-  :::
 
 #### LaTeX Mathematical Formulas
   - Inline formula: $E = mc^2$
@@ -169,9 +164,6 @@ Using `:::` markers
   ```md
   ![Image caption](image-url)
   ```
-The result will be displayed as:
-
-![Slate Blog Preview](https://pub-acdbc21bc3964d18a684b0c51010a4e5.r2.dev/slate-blog-preview.png)
   
 ## Updates
 ### Version 1.1.1

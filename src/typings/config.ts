@@ -32,6 +32,11 @@ type SocialLinkIcon =
   | 'weibo'
   | 'x'
   | 'youtube'
+  | 'dribbble'
+  | 'notion'
+  | 'link'
+  | 'figma'
+  | 'rss'
   | { svg: string };
 
 export interface SlateConfig {

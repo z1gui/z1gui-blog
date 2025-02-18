@@ -4,7 +4,7 @@
   @apply block h-full w-full bg-current fill-current text-inherit;
 
   &.facebook {
-    --icon: url('../../assets/images/github.svg');
+    --icon: url('../../assets/images/facebook.svg');
   }
 
   &.github {
@@ -12,10 +12,10 @@
   }
 
   &.instagram {
-    --icon: url('../../assets/images/github.svg');
+    --icon: url('../../assets/images/instagram.svg');
   }
 
-  &.npm {
+  /* &.npm {
     --icon: url('../../assets/images/github.svg');
   }
 
@@ -25,25 +25,45 @@
 
   &.rednote {
     --icon: url('../../assets/images/github.svg');
-  }
+  } */
 
   &.threads {
-    --icon: url('../../assets/images/github.svg');
+    --icon: url('../../assets/images/threads.svg');
   }
 
-  &.stackoverflow {
+  /* &.stackoverflow {
     --icon: url('../../assets/images/github.svg');
   }
 
   &.weibo {
     --icon: url('../../assets/images/github.svg');
-  }
+  } */
 
   &.x {
-    --icon: url('../../assets/images/github.svg');
+    --icon: url('../../assets/images/x.svg');
   }
 
   &.youtube {
-    --icon: url('../../assets/images/github.svg');
+    --icon: url('../../assets/images/youtube.svg');
+  }
+
+  &.dribbble {
+    --icon: url('../../assets/images/dribbble.svg');
+  }
+
+  &.notion {
+    --icon: url('../../assets/images/notion.svg');
+  }
+
+  &.link {
+    --icon: url('../../assets/images/link.svg');
+  }
+
+  &.figma {
+    --icon: url('../../assets/images/figma.svg');
+  }
+
+  &.rss {
+    --icon: url('../../assets/images/rss.svg');
   }
 }

@@ -22,7 +22,7 @@ function SocialIcon({ className, style }: SocialIconProps) {
 function SocialLinks(props: SocialLinksProps) {
   const { className, list = slateConfig.socialLinks ?? [] } = props;
 
-  const classes = classNames('flex items-center gap-6', className);
+  const classes = classNames('flex items-center gap-6 flex-wrap', className);
 
   const socialLinks = useMemo(() => {
     return list.map((item) => {
@@ -46,7 +46,7 @@ function SocialLinks(props: SocialLinksProps) {
     <section className={classes}>
       {socialLinks.map((socialLink, index) => (
         <a
-          className="h-6 w-6 cursor-pointer"
+          className="h-6 w-6 cursor-pointer text-slate10 hover:text-slate12 transition-al"
           href={socialLink.link}
           target="_blank"
           rel="noopener"
