@@ -71,15 +71,20 @@ pnpm build
 
 ```ts
 type SocialLinkIcon =
-  | 'discord'
+  | 'dribbble'
   | 'facebook'
+  | 'figma'
   | 'github'
   | 'instagram'
-  | 'linkedin'
-  | 'mastodon'
+  | 'jike'
+  | 'link'
+  | 'notion'
   | 'npm'
-  | 'slack'
-  | 'twitter'
+  | 'rednote'
+  | 'rss'
+  | 'threads'
+  | 'stackoverflow'
+  | 'weibo'
   | 'x'
   | 'youtube'
   | { svg: string }
