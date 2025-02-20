@@ -8,7 +8,7 @@ if ! git remote | grep -q "^slate_blog$"; then
     echo "Successfully added Slate Blog remote repository"
 fi
 
-git fetch slate_blog || { echo "Failed to fetch code from Slate Blog"; exit 1; }
+git fetch --no-tags slate_blog || { echo "Failed to fetch code from Slate Blog"; exit 1; }
 
 git merge slate_blog/main --allow-unrelated-histories
 if [ $? -ne 0 ]; then
