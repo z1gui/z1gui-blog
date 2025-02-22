@@ -26,18 +26,13 @@ type SocialLinkIcon =
   | 'figma'
   | 'github'
   | 'instagram'
-  | 'jike'
   | 'link'
+  | 'mail'
   | 'notion'
-  | 'npm'
-  | 'rednote'
   | 'rss'
   | 'threads'
-  | 'stackoverflow'
-  | 'weibo'
   | 'x'
   | 'youtube'
-  | 'mail'
   | { svg: string };
 
 export interface SlateConfig {
