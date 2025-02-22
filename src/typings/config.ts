@@ -37,6 +37,7 @@ type SocialLinkIcon =
   | 'weibo'
   | 'x'
   | 'youtube'
+  | 'mail'
   | { svg: string };
 
 export interface SlateConfig {
