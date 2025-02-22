@@ -16,13 +16,14 @@ It also works seamlessly with [Obsidian](https://obsidian.md/), helping you turn
 
 ## ✨ Features
 
-- Minimalist style theme, adaptable to multiple platforms
-- Support `light` and `dark` mode.
-- Zero-based quick start, foolproof configuration, easy deployment
-- Support for article drafts, local preview, and automatic draft filtering in production builds
-- Default RSS generation with Follow subscription authentication
-- Integrated Algolia search
-- Complete SEO optimization to improve search engine rankings
+- Minimalist design theme
+- Mobile-first responsive layout
+- Light and dark mode support
+- Quick setup with zero configuration required
+- Draft mode with local preview and automatic production filtering
+- Built-in RSS feed with Follow authentication
+- Integrated Algolia search functionality
+- Comprehensive SEO optimization for better search rankings
 
 ## 🪜 Framework
 
@@ -161,8 +162,19 @@ The result will be displayed as:
   
 ## Updates
 
-### Version 1.1
+### Version 1.2.0
+- Support Social Links
+- Support i18n (English and Chinese)
+- Fixed known issues
+
+### Version 1.1.1
+- Fixed known issues
+
+### Version 1.1.0
 - Upgraded to support [Tailwind CSS v4.0](https://tailwindcss.com/blog/tailwindcss-v4)
 - Added dark mode support
 - Fixed known issues
 
+:::info
+From [Slate Blog](https://github.com/SlateDesign/slate-blog)
+:::
