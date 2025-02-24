@@ -99,7 +99,7 @@
     @apply text-slate11 mt-2 mb-6 list-disc pl-4 text-base leading-relaxed;
   }
 
-  .contains-task-list {
+  .task-list-item {
     @apply list-none;
   }
 
