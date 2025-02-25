@@ -13,5 +13,11 @@ export default defineConfig({
   readTime: true,
   footer: {
     copyright: '© 2025 Slate Design',
-  }
+  },
+  socialLinks: [
+    {
+      icon: 'github',
+      link: 'https://github.com/SlateDesign/slate-blog'
+    },
+]
 });

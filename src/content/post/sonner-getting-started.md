@@ -15,16 +15,24 @@ Initially, I used CSS keyframes for enter and exit animations, but they aren't i
 
 To transition the toast when it enters the screen, essentially to mimic the enter animation, we used `useEffect` to set the mounted state to true after the first render. This way, the toast is rendered with transform: `translateY(100%)` and then transitions to `transform: translateY(0)`. The style is based on a data attribute.
 
-```
-React.useEffect(() => {  setMounted(true);}, []); //... <li data-mounted={mounted}>
+```tsx
+React.useEffect(() => {  setMounted(true);}, []); 
+
+//... 
+
+<li data-mounted={mounted}>
 ```
 
 ## Stacking toasts
 
 To create the stacking effect, we multiply the gap between toasts by the index of the toast to get the y position. It's worth noting that every toast has `position: absolute` to make stacking easier. We also scale them down by 0.05 * index to create the illusion of depth. Here's the simplified CSS for it:
 
-```
-[data-sonner-toast][data-expanded="false"][data-front="false"] {  --scale: var(--toasts-before) * 0.05 + 1;  --y: translateY(calc(var(--lift-amount) * var(--toasts-before))) scale(      calc(-1 * var(--scale))    );}
+```tsx
+[data-sonner-toast][data-expanded="false"][data-front="false"] {  
+  --scale: var(--toasts-before) * 0.05 + 1;
+  --y: translateY(calc(var(--lift-amount) * var(--toasts-before))) scale(calc(-1 * var(--scale))
+    );
+}
 ```
 
 This works great until you have toasts with different heights, they won't stick out evenly. We fix it by simply making all the toasts the height of the toast in front when in stacked mode. Here's how the toasts would look with different heights:
@@ -36,14 +44,25 @@ Add toast
 
 The toasts can be swiped down to dismiss. That's just a simple event listener on the toast which updates a variable responsible for the `translateY` value.
 
-```
-// This is a simplified version of the codeconst onMove = (event) => {  const yPosition = event.clientY - pointerStartRef.current.y;   toastRef.current?.style.setProperty("--swipe-amount", `${yPosition}px`);};
+```tsx
+// This is a simplified version of the code
+const onMove = (event) => {
+  const yPosition = event.clientY - pointerStartRef.current.y;
+
+  toastRef.current?.style.setProperty("--swipe-amount", `${yPosition}px`);
+};
 ```
 
 The swipe is momentum-based, meaning you don't have to swipe until a specific threshold is met to remove the toast. If the swipe movement is fast enough, the toast will still be dismissed because the velocity is high enough.
 
-```
-const timeTaken = new Date().getTime() - dragStartTime.current.getTime();const velocity = Math.abs(swipeAmount) / timeTaken; // Remove if the threshold is met or velocity is high enoughif (Math.abs(swipeAmount) >= SWIPE_THRESHOLD || velocity > 0.11) {  deleteToast();}
+```tsx
+const timeTaken = new Date().getTime() - dragStartTime.current.getTime();
+const velocity = Math.abs(swipeAmount) / timeTaken; 
+
+// Remove if the threshold is met or velocity is high enough
+if (Math.abs(swipeAmount) >= SWIPE_THRESHOLD || velocity > 0.11) {
+  deleteToast();
+}
 ```
 
 
@@ -61,22 +80,58 @@ If you are interested in this type of stuff, then you might enjoy my course on a
 
 We calculate the expanded position of each toast by adding the heights of all preceding toasts and the gap between them. This value will become the new `translateY` when the user hovers over the toast area.
 
-```
-const toastsHeightBefore = React.useMemo(() => {  return heights.reduce((prev, curr, reducerIndex) => {    // Calculate offset up until current toast    if (reducerIndex >= heightIndex) {      return prev;    }     return prev + curr.height;  }, 0);}, [heights, heightIndex]); // ... const offset = React.useMemo(  () => heightIndex * GAP + toastsHeightBefore,  [heightIndex, toastsHeightBefore]);
+```tsx
+const toastsHeightBefore = React.useMemo(() => {
+  return heights.reduce((prev, curr, reducerIndex) => {
+    // Calculate offset up until current toast
+    if (reducerIndex >= heightIndex) {
+      return prev;
+      }
+                      
+      return prev + curr.height;
+    }, 0);
+  }, [heights, heightIndex]); 
+
+// ... 
+
+const offset = React.useMemo(
+  () => heightIndex * GAP + toastsHeightBefore,
+  [heightIndex, toastsHeightBefore]
+);
 ```
 
 ## State management
 
 To avoid using [context](https://react.dev/reference/react/createContext), we manage the state via the [Observer Pattern](https://javascriptpatterns.vercel.app/patterns/design-patterns/observer-pattern). We subscribe to the observable object in the `<Toaster />` component. Whenever the `toast()` function is called, the `<Toaster />` component (as the subscriber) is notified and updates its state. We can then render all the toasts using `Array.map()`.
 
-```
-function Toaster() {  React.useEffect(() => {    return ToastState.subscribe((toast) => {      setToasts((toasts) => [...toasts, toast]);    });  }, []);   // ...   return (    <ol>      {toasts.map((toast, index) => (        <Toast key={toast.id} toast={toast} />      ))}    </ol>  );}
+```tsx
+function Toaster() {
+  React.useEffect(() => {
+    return ToastState.subscribe((toast) => {
+      setToasts((toasts) => [...toasts, toast]);
+    });
+  }, []);
+            
+  // ...
+  
+  return (
+    <ol>
+      {toasts.map((toast, index) => (
+        <Toast key={toast.id} toast={toast} />
+      ))}
+    </ol>
+  );
+}
 ```
 
 To create a new toast, we simply import `toast` and call it. There's no need for hooks or context, just a straightforward function call.
 
-```
-import { toast } from "sonner"; // ... toast("My toast");
+```tsx
+import { toast } from "sonner"; 
+
+// ... 
+
+toast("My toast");
 ```
 
 
@@ -90,8 +145,10 @@ Add toast
 
 Once we start dragging, we set the toast to capture all future pointer events. This ensures that even if the mouse or our thumb moves outside the toast while dragging, the toast remains the target of the pointer events. As a result, dragging remains possible, even if we are outside of the toast, leading to a better user experience.
 
-```
-function onPointerDown(event) {  event.target.setPointerCapture(event.pointerId);}
+```tsx
+function onPointerDown(event) {
+  event.target.setPointerCapture(event.pointerId);
+}
 ```
 
 
